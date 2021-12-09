@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    transition: 0.2s ease;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: hsl(217, 54%, 11%);
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+}
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.card {
+    border-radius: 10px;
+    padding: 20px;
+    background: hsl(216, 50%, 16%) ;
+}
+.card-header {
+    padding: 0;
+    border: 0;
+}
+.card-body, .card-footer {
+    padding: 15px 0;
+    border:0;
+}
+.card-body p {
+    margin: 8px 0;
+}
+.card-header {
+    position: relative;
+}
+.card-header img {
+    width: 100%;
+    border-radius: 10px;
+}
+.card-header:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f06e";
+    color: white;
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background:hsl(178deg 100% 50% / 50%);
+    border-radius:10px;
+    transition:0.2s ease;
+}
+.card-footer img {
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+span {
+    color: hsl(215, 51%, 70%);
+    font-size: 16px;
+}
+#eth {
+    color: hsl(178, 100%, 50%);
+}
+hr {
+    color: hsl(215, 32%, 27%);
+}
+.limit span {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.limit span svg {
+    margin: 0 7px 0 0;
+}
+.card:hover {
+    cursor: pointer;
+}
+.card:hover .hover, .card:hover span.hover {
+    color: hsl(178, 100%, 50%) !important;
+    cursor: pointer;
+}
+.card:hover .card-header:after {
+    opacity: 1;
+}
+
+@media screen and (max-width: 400px) {
+    .main {
+        padding: 0 20px;
+    }
+    .card-body p {
+        font-weight: bold;
+    }
+}
